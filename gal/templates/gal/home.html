@@ -7,7 +7,7 @@
   <div class="row">
   <!--Display images  in a card-->
   {% for image_item in images %}
-   <div class="col-3">  
+   <div class="img col-3">  
     <div class="card h-100 border-0 shadow" id="vegetable">
       <div class="card-img-top">
         <div class="embed-responsive embed-responsive-4by3">
@@ -20,7 +20,7 @@
           </div>           
         </div>
       </div>
-    </div>    
+    </div>  
   </div><!--End of col-3 -->
   
   {% empty %}
@@ -29,7 +29,7 @@
   </div>
   {% endfor %}
   </div>
-
+  
    <!--Start of div to display image on click-->
    <div class="ImageShow">
     <div class="row" >
