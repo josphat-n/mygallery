@@ -1,9 +1,15 @@
+body{
+   /* height: 1000px; */
+    position: relative;    
+}
+
 h1{
    font-weight: bold;
    color:red;
 }
+
 .clearfix::after {
    content: "";
    clear: both;
    display: table;
- }
+}

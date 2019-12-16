@@ -3,7 +3,7 @@
 {{ block.super}}
 
 <div class="container">
-   
+
   <div class="row">
   <!--Display images  in a card-->
   {% for image_item in images %}
@@ -21,13 +21,14 @@
         </div>
       </div>
     </div>    
-  </div>
-
+  </div><!--End of col-3 -->
+  
   {% empty %}
   <div class="row">
     <h2 class="text-center">There No Items to display</h2>
   </div>
   {% endfor %}
+  </div> 
 
 </div>
 
