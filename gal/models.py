@@ -23,4 +23,9 @@ class Image(models.Model):
    image_category =models.ForeignKey(Category, on_delete=models.CASCADE,)
    image_image = models.ImageField(upload_to = 'img/',blank=True)
 
+   @classmethod
+   def get_all(cls):
+      imgs = Image.objects.all()
+      return imgs
+
    
