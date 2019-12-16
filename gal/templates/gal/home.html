@@ -3,22 +3,25 @@
 {{ block.super}}
 
 <div class="container">
-
-  <!-- Looping through images  -->
-  {% for image_item in images %}
-
+   
   <div class="row">
-    <!-- displaying Image names -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"> {{ image_item.image_name }} </h2>
-    </div>
-
+  <!--Display images  in a card-->
+  {% for image_item in images %}
+   <div class="col-3">  
+    <div class="card h-100 border-0 shadow" id="vegetable">
+      <div class="card-img-top">
+        <div class="embed-responsive embed-responsive-4by3">
+          <div class="embed-responsive-item">
+            <img src="{{image_item.image_image.url}}" alt="" class="img-fluid w-100" />
+          </div>
+          <hr>
+          <div class= "card-body">       
+            <button class="btn btn-primary">View Details</button>        
+          </div>           
+        </div>
+      </div>
+    </div>    
   </div>
-
-   <!--Display images  -->
-   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <img src="{{image_item.image_image.url}}" class="img-responsive" alt="Image">
-   </div>
 
   {% empty %}
   <div class="row">
