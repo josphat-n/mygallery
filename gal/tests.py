@@ -33,3 +33,35 @@ class LocationTestClass(TestCase):
    # Test the functionality to delete all objects
    def tearDown(self):
       Location.objects.all().delete()
+      
+class CategoryTestClass(TestCase):
+   # Set up method
+   def setUp(self):
+      self.food= Category(category_name = 'food')
+   
+   # Testing  instance
+   def test_instance(self):
+      self.assertTrue(isinstance(self.food,Category))  
+          
+   # Testing Save Method
+   def test_save_method(self):
+      self.food.save_category()
+      categories = Category.objects.all()
+      self.assertTrue(len(categories) > 0)  
+      
+   # Teardown Method
+   def tearDown(self):
+      Category.objects.all().delete()
+   
+   #Delete Method   
+   def test_delete(self):
+      self.food.save_category()    
+      self.food.delete_category()
+      categories=Category.objects.all()
+      self.assertTrue(len(categories)<1)    
+    
+   #Search Functionality
+   def test_get_category(self):
+      self.food.save_category()
+      foods =Category.search_category('foods')
+      self.assertEquals(len(foods),1) 

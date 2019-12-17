@@ -46,7 +46,15 @@ class Category(models.Model):
       """
       function to delete a category from the database
       """
-      self.delete()      
+      self.delete() 
+      
+   @classmethod
+   def search_category(cls,category):
+      """
+      function to querry the category table and returns the category name according to the search criteria
+      """
+      category=cls.objects.filter(category_name=category)
+      return category       
       
 class Image(models.Model):
    image_name = models.CharField(max_length =30)
