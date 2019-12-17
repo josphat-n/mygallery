@@ -15,7 +15,7 @@ class Category(models.Model):
    
    def __str__(self):
       return self.category_name
-   
+      
 class Image(models.Model):
    image_name = models.CharField(max_length =30)
    image_description = models.TextField()
@@ -28,4 +28,11 @@ class Image(models.Model):
       imgs = Image.objects.all()
       return imgs
 
-   
+   def search_image(category):
+      """
+      function for searching for an image by Category
+      """
+      category=Category.objects.filter(category_name = 'search_term')
+      imgs =Image.objects.filter(image_category=category)
+      
+    
