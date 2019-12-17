@@ -22,10 +22,10 @@ class Location(models.Model):
       return location 
    
    def delete_location(self):
-   """
-   Delete a location from the database
-   """
-   self.delete()
+      """
+      Delete a location from the database
+      """
+      self.delete()
    
 class Category(models.Model):
    """
@@ -63,9 +63,9 @@ class Image(models.Model):
       
    @classmethod
    def get_all(cls):
-      """"
+      """
       This function allows for the fetching of all the image objects from the database
-      """"
+      """
       imgs = Image.objects.all()
       return imgs  
    
@@ -76,9 +76,9 @@ class Image(models.Model):
       self.save()  
    
    def delete_image(self):
-      """"
+      """
       function to delete an image from the db
-      """"
+      """
       self.delete()  
     
    def search_image(category):

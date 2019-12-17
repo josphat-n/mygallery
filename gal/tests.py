@@ -15,4 +15,21 @@ class LocationTestClass(TestCase):
    def test_save_method(self):
       self.nairobi.save_location()
       locations = Location.objects.all()
-      self.assertTrue(len(locations) > 0)   
+      self.assertTrue(len(locations) > 0)  
+       
+   # Testing Delete Method
+   def test_delete(self):
+      self.nairobi.save_location()
+      self.nairobi.delete_location()
+      locations =Location.objects.all()
+      self.assertTrue(len(locations)<1)
+      
+   # Testing get_location Method
+   def test_get_location(self):
+      self.nairobi.save_location()
+      found_location=Location.get_location('nairobi')
+      self.assertEquals(len(found_location),1)
+   
+   # Test the functionality to delete all objects
+   def tearDown(self):
+      Location.objects.all().delete()
