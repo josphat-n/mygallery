@@ -3,7 +3,7 @@
 This project was generated with [Python](https://www.python.org/) version 3.6.0 <br>
 
 ## Live Link
-The app is hosted on heroku. To view the site Click [here](https://jn-myGallery.herokuapp.com)
+The app is hosted on heroku. To view the site Click [here](https://jn-mygallery.herokuapp.com)
 
 ## Project Description
   MyGallery is a web app that allows users to view several photos posted by the author (in this case myself). The users also get click on an image and view an enlarged version of the photo, together with other details of the photo.<br>
@@ -24,7 +24,7 @@ A user may interact with the app that is hosted in the live-link as indicated ab
 Below are the steps to have the app running locally:
 
   ```
-  $ git clone https://github.com/Josephat-n/myGallery
+  $ git clone https://github.com/Josephat-n/mygallery
   $ cd myBlog/
   ```
   * create a virtual environment and activate it.
