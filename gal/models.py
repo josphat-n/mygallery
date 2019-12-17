@@ -1,4 +1,5 @@
 from django.db import models
+from pyuploadcare.dj.models import ImageField
 
 # Create your models here.
 class Location(models.Model):
@@ -61,7 +62,7 @@ class Image(models.Model):
    image_description = models.TextField()
    image_location =models.ForeignKey(Location, on_delete=models.CASCADE,)
    image_category =models.ForeignKey(Category, on_delete=models.CASCADE,)
-   image_image = models.ImageField(upload_to = 'img/',blank=True)
+   image_image = ImageField(blank=True, manual_crop="")
    
    def __str__(self):
       return self.image_name

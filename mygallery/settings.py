@@ -22,6 +22,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 # Application definition
 INSTALLED_APPS = [
+    'pyuploadcare.dj',
     'bootstrap4',
     'gal.apps.GalConfig',
     'django.contrib.admin',
@@ -60,6 +61,11 @@ TEMPLATES = [
         },
     },
 ]
+
+UPLOADCARE = {
+    'pub_key': '37d869170aa214ba8dc1',
+    'secret': 's6#u4%&ng(o2rb_kr_)8+xne_rw*%6^-t7+q38r2*)_!e+52xd',
+}
 
 WSGI_APPLICATION = 'mygallery.wsgi.application'
 
