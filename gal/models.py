@@ -59,10 +59,10 @@ class Category(models.Model):
       
 class Image(models.Model):
    image_name = models.CharField(max_length =30)
+   image_image = ImageField(blank=True, manual_crop="")
    image_description = models.TextField()
    image_location =models.ForeignKey(Location, on_delete=models.CASCADE,)
-   image_category =models.ForeignKey(Category, on_delete=models.CASCADE,)
-   image_image = ImageField(blank=True, manual_crop="")
+   image_category =models.ForeignKey(Category, on_delete=models.CASCADE,)   
    
    def __str__(self):
       return self.image_name
