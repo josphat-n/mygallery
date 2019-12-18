@@ -37,7 +37,7 @@ ROOT_URLCONF = 'mygallery.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -52,8 +52,8 @@ TEMPLATES = [
 ]
 
 UPLOADCARE = {
-    'pub_key': '37d869170aa214ba8dc1',
-    'secret': 's6#u4%&ng(o2rb_kr_)8+xne_rw*%6^-t7+q38r2*)_!e+52xd',
+    'pub_key': '214c2e9fcbcbd956dc5b',
+    'secret': '0ab8b670624c0f465c81',
 }
 
 WSGI_APPLICATION = 'mygallery.wsgi.application'
