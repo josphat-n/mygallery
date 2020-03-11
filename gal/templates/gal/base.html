@@ -10,7 +10,9 @@
   {% else %}
     <title> myGallery</title>
   {% endif %}
-
+  
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+  
   {% block styles %}
    {% bootstrap_css %}
    <link rel="stylesheet" href="{% static 'css/home.css' %}">
