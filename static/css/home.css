@@ -14,28 +14,8 @@ h1{
    display: table;
 }
 
-.ImageShow{/*The overall div for show functionality*/
-display: none;
-position:absolute;
-border: 2px solid black;
-margin-left:15%;
-margin-right: 15%;
-margin-top:10px; 
-background-color: white;
-}
-
-.box {
-float: left;
-width: 50%;
-padding: 10px;   
-}
-
 .card:hover{
    transform: scale(1.1);
    background-color: antiquewhite;
    cursor: all-scroll;
-}
-
-.img{
-   padding-bottom: 20px;
 }
