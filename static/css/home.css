@@ -1,5 +1,5 @@
 body{
-   /* height: 1000px; */
+   height: 1000px;
     position: relative;    
 }
 
@@ -18,4 +18,12 @@ h1{
    transform: scale(1.1);
    background-color: antiquewhite;
    cursor: all-scroll;
+}
+
+.img{
+   padding-bottom: 20px;
+}
+
+.navbar{
+   margin-bottom: 20px;
 }
